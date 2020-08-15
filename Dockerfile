@@ -14,9 +14,6 @@ RUN xcaddy build
 
 FROM alpine:3.12.0
 
-ARG GOSU_VERSION="1.11"
-ARG CADDY_HOME="/var/lib/caddy"
-
 # install caddy
 COPY --from=builder /go/src/app/caddy /usr/bin/caddy
 
