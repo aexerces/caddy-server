@@ -62,6 +62,8 @@ WORKDIR /var/lib/caddy
 ENV UID="1000"
 ENV GID="1000"
 
+VOLUME /var/lib/caddy
+
 COPY docker-entrypoint.sh /usr/bin
 RUN chmod +x /usr/bin/docker-entrypoint.sh
 ENTRYPOINT ["docker-entrypoint.sh"]
