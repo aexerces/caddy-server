@@ -60,6 +60,7 @@ ENV UID="1000"
 ENV GID="1000"
 
 VOLUME /var/lib/caddy
+VOLUME /var/www/dev
 VOLUME /var/log/caddy
 
 COPY docker-entrypoint.sh /usr/bin
