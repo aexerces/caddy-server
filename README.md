@@ -2,6 +2,14 @@
 You can use this image as a reverse proxy to reach  an isolated docker container over HTTPS.   
 When it starts, Caddy automatically configures HTTPS with a certificate obtained from let's encrypt for you domain name.
 
+# New
+## Raspberry PI
+A version for Raspberry PI is now available. It has been produced on a Raspberry PI 4 with 4Gb RAM.
+Use the aarch64 tag:
+```
+aexerces/caddy-server:aarch64
+```
+
 # Howto  
 ## Test it
 The default command in the Dockerfile show version informations, so it's not very useful: 

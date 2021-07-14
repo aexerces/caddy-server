@@ -1,4 +1,4 @@
-FROM golang:1.14.7-alpine3.12 AS builder
+FROM golang:1.17-rc-alpine3.14 AS builder
 
 LABEL maintainer="Emmanuel Postigo <ascende.superius@protonmail.com>"
 
@@ -12,7 +12,7 @@ WORKDIR /go/src/app
 RUN go get -u github.com/caddyserver/xcaddy/cmd/xcaddy
 RUN xcaddy build
 
-FROM alpine:3.12.0
+FROM alpine:3.14.0
 
 # install caddy
 COPY --from=builder /go/src/app/caddy /usr/bin/caddy
