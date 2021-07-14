@@ -1,4 +1,4 @@
-FROM golang:1.14.7-alpine3.12 AS builder
+FROM golang:1.17-rc-alpine3.14 AS builder
 
 LABEL maintainer="Emmanuel Postigo <ascende.superius@protonmail.com>"
 
