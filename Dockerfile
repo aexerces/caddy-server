@@ -10,7 +10,7 @@ RUN apk --no-cache add git \
 WORKDIR /go/src/app
 
 RUN go get -u github.com/caddyserver/xcaddy/cmd/xcaddy
-RUN xcaddy build
+RUN xcaddy build --with github.com/caddy-dns/cloudflare@latest
 
 FROM alpine:3.14.0
 
@@ -20,6 +20,7 @@ COPY --from=builder /go/src/app/caddy /usr/bin/caddy
 # validate install
 RUN /usr/bin/caddy version
 RUN /usr/bin/caddy environ
+RUN caddy list-modules
 
 # From gosu, https://github.com/tianon/gosu/blob/master/INSTALL.md
 ENV GOSU_VERSION 1.12
