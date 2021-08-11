@@ -23,7 +23,7 @@ RUN /usr/bin/caddy environ
 RUN caddy list-modules
 
 # From gosu, https://github.com/tianon/gosu/blob/master/INSTALL.md
-ENV GOSU_VERSION 1.12
+ENV GOSU_VERSION 1.13
 RUN set -eux; \
   \
   apk add --no-cache --virtual .gosu-deps \
