@@ -51,7 +51,9 @@ RUN set -eux; \
   gosu --version; \
   gosu nobody true
 
-RUN apk --no-cache add libcap
+RUN apk --no-cache add \
+        libcap \
+        tini
 
 EXPOSE 80 443 2015
 

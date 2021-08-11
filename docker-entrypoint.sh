@@ -15,5 +15,5 @@ adduser  -g "$GID" \
 chown -R "$UID":"$GID" /var/lib/caddy
 chown -R "$UID":"$GID" /var/www/dev
 chown -R "$UID":"$GID" /var/log/caddy
-exec gosu caddy "$@"
+exec gosu caddy tini -- "$@"
 
